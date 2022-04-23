@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Math App</title>
+</head>
+<body>
+    <header>
+        <h1>Math App</h1>
+        <nav class="nav">
+            <ul class="nav__container">
+                <li class="nav__container--item"><a href="descuentos.html">Descuentos</a></li>
+                <li class="nav__container--item"><a href="estadistica.html">Estadística</a></li>
+                <li class="nav__container--item"><a href="#">Salarios</a></li>
+                <li class="nav__container--item"><a href="temperatura.html">Temperatura</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="figures-container">
+            <div class="figure square-box">
+                <div class="figure__header">
+                    <span><i class="far fa-square"></i></span>
+                    <h2 class="figure__header--title">Cuadrado</h2>
+                </div>
+                <form class="figure__form">
+                    <label for="square_input" class="figure__form--label">¿Cuánto mide cada lado de cuadrado?</label>
+                    <div class="figure__inputs-container">
+                        <input type="number" name="" id="square_input" class="figure__input" placeholder="Lado...">
+                    </div>
+                    <div class="figure__button-container">
+                        <button type="button" onclick="getSquareArea()"> Calcular área</button>
+                        <button type="button" onclick="getSquarePerimeter()">Calcular perímetro</button>
+                    </div>
+                    <div class="figure__results-container">
+                        <p id="area_square_result" class="figure__results"></p>
+                        <p id="perimeter_square_result" class="figure__results"></p>
+                    </div>
+                </form>
+            </div>
+            <div class="figure triangle-box">
+                <div class="figure__header">
+                    <span class="triangles-icons-container">
+                        <i class="fas fa-play outside-triangle">
+                        </i>
+                        <i class="fas fa-play inside-triangle"></i>
+                    </span>
+                    <h2 class="figure__header--title triangle-title">Triángulo</h2>
+                </div>
+                <form class="figure__form">
+                    <label for="triangle_input" class="figure__form--label triangle-label">¿Cuánto mide cada lado de tu triángulo?</label>
+                    <div class="figure__inputs-container">
+                        <input type="number" name="" id="triangle_input_sideA" class="figure__input" placeholder="Lado A">
+                        <input type="number" name="" id="triangle_input__sideB" class="figure__input" placeholder="Lado B">
+                        <input type="number" name="" id="triangle_input__Base" class="figure__input" placeholder="Base">
+                    </div>
+                    <div class="figure__button-container">
+                        <button type="button" onclick="getTriangleArea()"> Calcular área</button>
+                        <button type="button" onclick="getTrianglePerimeter()">Calcular perímetro</button>
+                    </div>
+                    <div class="figure__results-container">
+                        <p id="area_triangle_result" class="figure__results"></p>
+                        <p id="perimeter_triangle_result" class="figure__results"></p>
+                    </div>
+                </form>
+            </div>
+            <div class="figure circle-box">
+                <div class="figure__header">
+                    <span>
+                        <i class="far fa-circle"></i>
+                    </span>
+                    <h2 class="figure__header--title">Círculo</h2>
+                </div>
+                <form class="figure__form">
+                    <label for="circle_input" class="figure__form--label">¿Cuánto mide el radio de tu círculo?</label>
+                    <div class="figure__inputs-container">
+                        <input type="number" name="" id="circle_input" class="figure__input" placeholder="Radio...">
+                    </div>
+                    <div class="figure__button-container">
+                        <button type="button" onclick="getCircleArea()"> Calcular área</button>
+                        <button type="button" onclick="getCirclePerimeter()">Calcular perímetro</button>
+                    </div>
+                    <div class="figure__results-container">
+                        <p id="area_circle_result" class="figure__results"></p>
+                        <p id="perimeter_circle_result" class="figure__results"></p>
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+    </main>
+    <script src="figuras.js"></script>
+</body>
+</html>
